@@ -1,0 +1,14 @@
+C:\Users\makn\Dropbox\taliban\SL3\SL\bin\SL.dll.config
+C:\Users\makn\Dropbox\taliban\SL3\SL\bin\SL.dll
+C:\Users\makn\Dropbox\taliban\SL3\SL\bin\SL.pdb
+C:\Users\makn\Dropbox\taliban\SL3\SL\bin\Newtonsoft.Json.dll
+C:\Users\makn\Dropbox\taliban\SL3\SL\bin\System.Net.Http.Formatting.dll
+C:\Users\makn\Dropbox\taliban\SL3\SL\bin\System.Web.Http.dll
+C:\Users\makn\Dropbox\taliban\SL3\SL\bin\System.Web.Http.WebHost.dll
+C:\Users\makn\Dropbox\taliban\SL3\SL\bin\Newtonsoft.Json.xml
+C:\Users\makn\Dropbox\taliban\SL3\SL\bin\System.Net.Http.Formatting.xml
+C:\Users\makn\Dropbox\taliban\SL3\SL\bin\System.Web.Http.xml
+C:\Users\makn\Dropbox\taliban\SL3\SL\bin\System.Web.Http.WebHost.xml
+C:\Users\makn\Dropbox\taliban\SL3\SL\obj\Debug\SL.csprojResolveAssemblyReference.cache
+C:\Users\makn\Dropbox\taliban\SL3\SL\obj\Debug\SL.dll
+C:\Users\makn\Dropbox\taliban\SL3\SL\obj\Debug\SL.pdb

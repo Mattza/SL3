@@ -1,0 +1,12 @@
+<md-list>
+	<md-item ng-repeat="trip in history.history" ng-click="history.search(trip)" ng-swipe-left="history.remove(trip)">
+		<md-item-content>
+		<div class="md-tile-content">
+			<h3>
+				{{trip.from}} --> {{trip.to}}
+			</h3>
+		</div>
+		</md-item-content>
+		<md-divider ng-if="!$last" class="divider"></md-divider>
+	</md-item>
+</md-list>
