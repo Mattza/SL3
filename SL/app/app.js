@@ -13,8 +13,8 @@ var komFramISLApp = angular
         templateUrl: 'app/scopes/Result.html',
     });
 })
-    .run(['positionFactory',
-        function (positionFactory) {
-
+    .run(['positionFactory','smartFactory',
+        function (positionFactory, smartFactory) {
+            smartFactory.fixData();
             navigator.geolocation.getCurrentPosition(positionFactory.setPosition);
     }]);
