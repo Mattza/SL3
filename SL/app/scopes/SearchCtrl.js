@@ -26,15 +26,17 @@ komFramISLApp.controller('SearchCtrl', ['searchFactory', 'smartFactory', 'positi
             };
 
             search.waitingPosition = true;
-            //position.promise.then(function () {
-            searchFactory.searchFn({
+            position.promise.then(function () {
+                searchFactory.searchFn({
                     from: search.from,
                     to: search.to,
                     time: undefined
                 },
-                position, successCb, errorCb, false);
-            search.isSearching = true;
-            search.waitingPosition = false;
+                    position, successCb, errorCb, false);
+                search.isSearching = true;
+                search.waitingPosition = false;
+            });
+            
         };
 
         search.doit = function () {
