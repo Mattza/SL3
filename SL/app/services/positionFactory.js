@@ -7,9 +7,11 @@ komFramISLApp.factory('positionFactory', ['$q',
             position.resolve(coord);
         };
         var getPosition = function () {
-            navigator.geolocation.getCurrentPosition(function (loc) {
-                position.resolve(loc.coords);
-            });
+            if (!position.$resolved) {
+                navigator.geolocation.getCurrentPosition(function (loc) {
+                    position.resolve(loc.coords);
+                });
+            }
             return position;
         };
 

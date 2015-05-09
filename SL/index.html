@@ -8,7 +8,7 @@
     </script>
     <link rel="stylesheet/less" type="text/css" href="app/assets/styles/application.less" />
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.6.1/angular-material.min.css">
-
+    <link href="libs/bower/leaflet/dist/leaflet.css" rel="stylesheet" />
     <!-- Google icons -->
     <!--<link href="libs/bower/material-design-icons/sprites/svg-sprite/svg-sprite-navigation.css" rel="stylesheet">-->
 
@@ -18,7 +18,7 @@
     <script src="libs/bower/ngstorage/ngStorage.js"></script>
     <script src="libs/bower/angular-touch/angular-touch.js"></script>
     <script src="libs/bower/angular-ui-router/release/angular-ui-router.js"></script>
-
+    <script src="libs/bower/leaflet/dist/leaflet.js"></script>
 
     <!-- Angular Material Dependencies -->
     <!--<script src="//cdn.jsdelivr.net/hammerjs/2.0.4/hammer.min.js"></script>
@@ -41,6 +41,7 @@
     <script src="app/scopes/ResultCtrl.js"></script>
 
     <script src="app/directives/searchBlock.js"></script>
+    <script src="app/directives/map.js"></script>
 
     <script src="app/filters/legToIconClass.js"></script>
 
@@ -68,6 +69,10 @@
             </div>
             <div flex>
                 <div ui-view></div>
+
+                <!--<div>
+                    <map></map>
+                </div>-->
                 <footer>
                     <a ui-sref="index">Sök</a> 
                     <a ui-sref="index">Realtid</a> 

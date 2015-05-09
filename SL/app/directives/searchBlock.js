@@ -8,7 +8,5 @@ komFramISLApp.directive('searchBlock', function () {
             smartStation: '=',
             callbackFn: '&'
         }
-
     }
-
-})
+});

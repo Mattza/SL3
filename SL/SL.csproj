@@ -140,9 +140,6 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="app\assets\styles\application.less" />
-    <Content Include="app\assets\styles\_colors.less" />
-    <Content Include="app\assets\styles\_header.less" />
-    <Content Include="app\assets\styles\_helpers.less" />
     <Content Include="app\assets\styles\_icons.less" />
     <Content Include="app\assets\styles\_layout.less" />
     <Content Include="libs\bower\angular-touch\.bower.json" />
