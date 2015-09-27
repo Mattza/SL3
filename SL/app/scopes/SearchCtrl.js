@@ -26,31 +26,35 @@ komFramISLApp.controller('SearchCtrl', ['searchFactory', 'smartFactory', 'positi
             };
 
             search.waitingPosition = true;
-            position.promise.then(function () {
-                searchFactory.searchFn({
-                    from: search.from,
-                    to: search.to,
-                    time: undefined
-                },
-                    position, successCb, errorCb, false);
-                search.isSearching = true;
-                search.waitingPosition = false;
-            });
-            
+            //position.promise.then(function () {
+            search.time = moment(search.time).format('HH:mm'),
+            search.date = moment(search.date).format('YYYY/MM/DD')
+            searchFactory.searchFn(search,
+                null, successCb, errorCb, false);
+            //searchFactory.searchFn({
+            //    from: search.from,
+            //    to: search.to,
+            //    
+
+            //}
+            search.isSearching = true;
+            search.waitingPosition = false;
+            //});
+
         };
 
         search.doit = function () {
 
             if (search.from.type === 1 || search.to.type === 1) {
-                position.promise.then(function (data) {
-                    if (search.from.type === 1) {
-                        search.from.coord = data.coords;
-                    }
-                    if (search.to.type === 1) {
-                        search.to.coord = data.coords;
-                    }
-                    callSearch();
-                });
+                //position.promise.then(function (data) {
+                if (search.from.type === 1) {
+                    search.from.coord = data.coords;
+                }
+                if (search.to.type === 1) {
+                    search.to.coord = data.coords;
+                }
+                callSearch();
+                //});
             } else {
                 callSearch();
             }
@@ -90,4 +94,4 @@ komFramISLApp.controller('SearchCtrl', ['searchFactory', 'smartFactory', 'positi
                 _.remove(search.history.list, historyObj);
             }
         };
-}]);
+    }]);

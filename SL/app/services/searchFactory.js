@@ -21,13 +21,15 @@ komFramISLApp.factory('searchFactory', ['$http',
             taco.originId = getDotUrl(searchObj.from, 'origin')
             taco.destId = getDotUrl(searchObj.to, 'dest');
             if (searchObj.time) {
-                taco.time = searchObj.time
+                taco.time = '&time=' + searchObj.time;
+            }
+            if (searchObj.date) {
+                taco.date = '&date=' + searchObj.date;
+
             }
             var url = '/api/SL';
             var shObj = searchObj;
 
-            /*$http.get('
-                    http : //fredriklowenhamn.se/slappi/api/sl/?origin=' + from + '&destination=' + to + '&coord=' + position)*/
             $http.post(url,taco)
                 .success(function (data, status, headers, config) {
                     if (data.TripList.errorCode) {
@@ -40,6 +42,7 @@ komFramISLApp.factory('searchFactory', ['$http',
                                 trip.LegList.Leg = [temp];
                             }
                             trip.StartTime = trip.LegList.Leg[0].Origin.time;
+                            trip.StartDate = trip.LegList.Leg[0].Origin.date;
                             trip.ArrivalTime = trip.LegList.Leg[trip.LegList.Leg.length - 1].Destination.time;
                         });
                         if (append) {

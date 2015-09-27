@@ -2,14 +2,16 @@
     <form ng-submit="search.doit()">
         <search-block placeholder="Från" model="search.from" smart-station="search.smartStation.fromSuggestions" callback-fn="search.selectFrom(station)"></search-block>
         <search-block placeholder="Till" model="search.to" smart-station="search.smartStation.toSuggestions" callback-fn="search.selectTo(station)"></search-block>
+        <input class="search-time" type="time" placeholder="Tid" ng-model="search.time" />
+        <input class="search-date" type="date" placeholder="Datum" ng-model="search.date" />
         <input type="submit" value="Sök" />
     </form>
 </div>
 
 <div>
-    <h1 ng-if="search.isSearching">SÖKER!</h3>
-    <h1 ng-if="search.waitingPosition">VÄNTAR PÅ POSITION!</h3>
-    <h1 ng-if="search.isError">Nu gick något sönder!</h3>
+    <h1 ng-if="search.isSearching">SÖKER!</h1>
+    <h1 ng-if="search.waitingPosition">VÄNTAR PÅ POSITION!</h1>
+    <h1 ng-if="search.isError">Nu gick något sönder!</h1>
 </div>
 
 <md-list>
