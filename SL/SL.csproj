@@ -21,6 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -122,6 +123,7 @@
     <Content Include="libs\bower\lodash\dist\lodash.underscore.js" />
     <Content Include="libs\bower\lodash\dist\lodash.underscore.min.js" />
     <Content Include="libs\bower\lodash\LICENSE.txt" />
+    <Content Include="libs\bower\moment\moment.js" />
     <Content Include="libs\bower\ngstorage\.gitignore" />
     <Content Include="libs\bower\ngstorage\Gruntfile.js" />
     <Content Include="libs\bower\ngstorage\ngStorage.js" />
